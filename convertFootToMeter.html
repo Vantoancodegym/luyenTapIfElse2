@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>convert feet to meters</title>
+</head>
+<body>
+<p> Convert feet to meters<br>
+    <input id="inputA" type="number"><br>
+    <input type="button" value="Convert to meters" id="m" onclick="convert(this)"><br>
+    M: <span id="resultM"></span><br>
+    <input type="button" value="Convert to Feet" id="f" onclick="convert(this)"><br>
+    F: <span id="resultF"></span>
+
+</p>
+<script>
+    function convert(e){
+        let idOfE= e.getAttribute("id");
+        let index = document.getElementById("inputA").value;
+        if (idOfE=="m"){
+            document.getElementById("resultM").innerHTML=convertToMeter(index);
+        }else {
+            document.getElementById("resultF").innerHTML=convertToFeet(index);
+        }
+
+    }
+    function convertToFeet(x){
+        return 3.279*x
+    }
+    function convertToMeter(x){
+        return 0.305*x
+    }
+</script>
+</body>
+</html>

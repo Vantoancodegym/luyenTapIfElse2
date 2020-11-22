@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>temp convert</title>
+</head>
+<body>
+<h1>Temperature Convert</h1>
+<p ><b>
+    Type a value in the F field convert to C<br>
+    F : <input type="text" oninput="convertFtoC()" id="inputF"><br>
+    C : <span id="result"></span></b>
+</p>
+<script>
+    function (){
+        let f= document.getElementById("inputF").value;
+        document.getElementById("result").innerHTML=convert(f);}
+    function convert(x){
+        return (x-32)/1.8
+    }
+
+
+</script>
+</body>
+</html>
